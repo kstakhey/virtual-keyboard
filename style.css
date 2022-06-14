@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.use-keyboard-input {
+  width: 80%;
+  position: fixed;
+  left: 10%;
+  margin-top: 50px;
+  min-height: 350px;
+  padding: 10px;
+  font-size: 25px;
+}
+
+.keyboard {
+  width: 80%;
+  height: 350px;
+  background-color: #202020;
+  background-image: linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), linear-gradient(to bottom, #080808, #202020);
+  background-size: 10px 10px, 10px 10px, 10px 5px;
+  background-position: 0px 0px, 5px 5px, 0px 0px;
+  position: fixed;
+  bottom: 0;
+  left: 10%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  outline: none;
+  -webkit-transition: bottom 0.5s;
+  transition: bottom 0.5s;
+}
+
+.keyboard__hidden {
+  bottom: -340px;
+}
+
+.keyboard__logo {
+  max-width: 80px;
+}
+
+.keyboard__logo img {
+  width: 100%;
+  height: auto;
+}
+
+.keyboard__buttons {
+  height: 250px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.keyboard__buttons__button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 50px;
+  height: 40px;
+  font-size: 25px;
+  color: #1be02f;
+  background-color: #141716;
+  -webkit-box-shadow: 0px 5px 0px 0px black, 5px 7px 22px 1px rgba(38, 217, 61, 0.78);
+          box-shadow: 0px 5px 0px 0px black, 5px 7px 22px 1px rgba(38, 217, 61, 0.78);
+  margin-right: 10px;
+  margin-bottom: 15px;
+  border-radius: 3px;
+  border: 1px solid black;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  vertical-align: bottom;
+}
+
+.keyboard__buttons__button__active {
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+  color: #ca2f3f;
+  -webkit-box-shadow: 0px 0px 0px 0px black, 5px 5px 22px 1px #ca2f3f;
+          box-shadow: 0px 0px 0px 0px black, 5px 5px 22px 1px #ca2f3f;
+}
+
+.keyboard__buttons__button:focus {
+  outline: none;
+}
+
+.keyboard__buttons__button__wide {
+  width: 85px;
+  margin-top: -25px;
+}
+
+.keyboard__buttons__button__volume {
+  max-width: 50px;
+  max-height: 40px;
+  padding: 5px;
+}
+
+.keyboard__buttons__button__volume img {
+  width: 90%;
+  height: auto;
+}
+
+.keyboard__buttons__button__space {
+  width: 220px;
+}
+
+.keyboard__buttons__button--pressed {
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+  -webkit-box-shadow: 0px 0px 0px 0px black, 5px 5px 22px 1px #ca2f3f;
+          box-shadow: 0px 0px 0px 0px black, 5px 5px 22px 1px #ca2f3f;
+  color: #ca2f3f;
+}
+
+@media (max-width: 950px) {
+  .keyboard {
+    width: 100%;
+    left: 0;
+  }
+}
+
+@media (max-width: 750px) {
+  .keyboard__buttons {
+    margin-bottom: 5px;
+  }
+  .keyboard__buttons__button {
+    min-width: 35px;
+    font-size: 18px;
+    margin-right: 5px;
+  }
+  .keyboard__buttons__button__space {
+    width: 100px;
+  }
+  .keyboard__buttons__button__wide {
+    width: 60px;
+  }
+  .keyboard__logo {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .keyboard__buttons__button {
+    min-width: 23px;
+  }
+  .keyboard__buttons__button__wide {
+    width: 23px;
+    font-size: 15px;
+  }
+  .keyboard__buttons__button__volume {
+    width: 23px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
